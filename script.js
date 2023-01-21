@@ -18,6 +18,11 @@ function showMovies(movies){
     main.innerHTML = ``
     movies.forEach((movie) => {
         const {title, poster_path, vote_average, overview } = movie
+        //zapis do zmiany średniej
+        const srednia = vote_average
+        //pokazanie w konsoli średniej każdego filmy
+        console.log(srednia)
+        
         const movieEl = document.createElement('div')
         movieEl.classList.add('movie')
 
@@ -44,7 +49,7 @@ function getClassByRate(vote){
         return 'orange'
     }
     else{
-        return ' red'
+        return 'red'
     }
 }
 
